@@ -1,0 +1,209 @@
+/* Event Platform Admin Styles for Plugins Page */
+
+/* Plugin Action Link Button Styling */
+.check-updates-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #0073aa;
+}
+
+.check-updates-btn:hover {
+    background: #005a87;
+    border-color: #005a87;
+    color: white;
+    text-decoration: none;
+}
+
+.check-updates-btn.checking {
+    background: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    cursor: not-allowed;
+}
+
+.check-updates-btn.has-update {
+    background: #28a745;
+    border-color: #28a745;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.check-updates-btn.up-to-date {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.check-updates-btn.check-failed {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Pulse animation for update available */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Notification Styles */
+.event-platform-notification {
+    position: fixed;
+    top: 32px;
+    right: 20px;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999999;
+    animation: slideIn 0.3s ease-out;
+}
+
+.event-platform-notification.update-available {
+    border-left: 4px solid #28a745;
+}
+
+.event-platform-notification.success {
+    border-left: 4px solid #28a745;
+}
+
+.event-platform-notification.error {
+    border-left: 4px solid #dc3545;
+}
+
+.notification-content {
+    padding: 20px;
+}
+
+.notification-content h4 {
+    margin: 0 0 10px 0;
+    color: #23282d;
+    font-size: 16px;
+}
+
+.notification-content p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.update-details {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.notification-actions .button {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.notification-actions .button-primary {
+    background: #0073aa;
+    border: 1px solid #0073aa;
+    color: white;
+}
+
+.notification-actions .button-primary:hover {
+    background: #005a87;
+    border-color: #005a87;
+    color: white;
+}
+
+.notification-actions .button-secondary {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.notification-actions .button-secondary:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.dismiss-notification {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.dismiss-notification:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .event-platform-notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    
+    .notification-actions {
+        flex-direction: column;
+    }
+    
+    .notification-actions .button {
+        text-align: center;
+    }
+}
+
+/* Plugin row highlighting */
+.plugins-php .plugin-title .check-updates-btn {
+    margin-left: 5px;
+}
+
+/* Ensure proper spacing in plugin actions */
+.plugins-php .row-actions .check-updates-btn {
+    margin-right: 5px;
+} 

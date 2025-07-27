@@ -1,0 +1,204 @@
+/* Event Platform Update Checker Styles */
+
+.event-platform-updates .card,
+.event-platform-settings .card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.event-platform-updates .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.event-platform-updates .card h2,
+.event-platform-settings .card h2 {
+    margin-top: 0;
+    color: #23282d;
+    font-size: 1.5em;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+#generate-update-check-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+#generate-update-check-btn:hover {
+    background: linear-gradient(135deg, #005a87 0%, #004466 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,115,170,0.3);
+}
+
+#generate-update-check-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#update-status {
+    margin-top: 20px;
+}
+
+#update-status .notice {
+    border-radius: 6px;
+    border-left-width: 4px;
+}
+
+#update-results {
+    margin-top: 20px;
+}
+
+#update-results .notice {
+    border-radius: 6px;
+    border-left-width: 4px;
+}
+
+.update-info {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.update-info h4 {
+    margin-top: 0;
+    color: #28a745;
+    font-size: 1.3em;
+}
+
+.update-description {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.form-table th {
+    font-weight: 600;
+    color: #23282d;
+}
+
+.form-table td {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+.spinner.is-active {
+    float: none;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .event-platform-updates .card,
+    .event-platform-settings .card {
+        padding: 15px;
+    }
+    
+    #generate-update-check-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .form-table {
+        font-size: 14px;
+    }
+}
+
+/* Animation for status updates */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#update-status, #update-results {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Success/Error states */
+.notice-success {
+    border-left-color: #28a745;
+}
+
+.notice-error {
+    border-left-color: #dc3545;
+}
+
+.notice-info {
+    border-left-color: #17a2b8;
+}
+
+.notice-warning {
+    border-left-color: #ffc107;
+}
+
+/* Quick Actions Styles */
+.quick-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.quick-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.quick-actions .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.quick-actions .button-primary {
+    background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+    border: none;
+    color: white;
+}
+
+.quick-actions .button-primary:hover {
+    background: linear-gradient(135deg, #005a87 0%, #004466 100%);
+}
+
+.quick-actions .button-secondary {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.quick-actions .button-secondary:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+} 
