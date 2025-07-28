@@ -1,8 +1,18 @@
 <?php
 /*
 Plugin Name: Event Platform
-Description: Test.
-Version: 2.1.1
+Description: ✅ Features:
+Register custom post type: event with REST API support.
+Add custom meta fields: Premium event checkbox & address field.
+Automatically generate WooCommerce products for premium events.
+Create a custom database table (wp_event_rsvps) for RSVP records.
+Fully custom REST API endpoints under /wp-json/events/v1/
+Secure endpoints with role checks (organizer only where needed).
+React-based SPA frontend integration for a modern user experience.
+Google Maps integration using event address.
+Performance optimized with Transient API caching.
+This release marks the beginning of stable production usage.
+Version: 3.1.0
 Author: WASEEM_AZZAM
 */
 
