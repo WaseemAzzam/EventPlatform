@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Event Platform
-Description: Registers the 'event' custom post type with custom fields and WooCommerce integration.
+Description: Test.
 Version: 2.1.1
 Author: WASEEM_AZZAM
 */
